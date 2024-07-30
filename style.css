@@ -1,0 +1,527 @@
+*{
+    box-sizing: border-box;
+}
+html body{
+    height: 100%;
+    padding: 0px;
+    margin:0px;
+    background-color: rgb(243, 242, 242);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:  #444;
+    margin: 5px;
+}
+.text-input{
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px ;
+    border: 1px solid #e0e0e0;
+    outline : none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+
+
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+
+.btn-big{
+    padding: 0.7rem 1.3rem;
+    line-height: 1.3rem;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    color: white;
+    border: 1px solid transparent;
+    background-color: indianred;
+    border-radius: 0.25rem;
+    font-size: 1.08em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn:hover {
+    color: white !important;
+    background: #6b0118;
+}
+
+header{
+    padding: 0px;
+    margin:0px;
+    width: 100%;
+    height: 66px;
+    background-color:crimson   
+}
+header *{
+    color:white;
+}
+.logo{
+    height:inherit;
+    float: left;
+    margin-left: 5px;
+}
+.logo-text{
+    margin: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo-text span{
+    color: rgb(241, 148, 167);
+}
+ul{
+    float:right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;  
+}
+
+ul li{
+    float: left;
+    position: relative;
+    
+}
+
+ul li ul{
+    float:left;
+    position: absolute;  
+    top: 66px;     
+    right: 0px;
+    width:180px;
+    display:none;
+    z-index: 8888;
+}
+ul li:hover ul{
+    display:block;
+}
+ul li ul li{
+    width:100%;
+}
+
+ul li ul li a{
+    padding:10px;
+    color: black;
+    background-color: white;
+}
+ul li ul li a:hover{
+    background-color: darkgray;
+
+}
+.logout{
+    color: red;
+}
+ul li a{
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: block;
+    
+}
+ul li:hover{
+    background-color: rgb(245, 5, 53);
+    
+}
+.menu-toggle {
+    display: none; /* or visibility: hidden; depending on your design needs */
+}
+
+.page-wrapper{
+    min-height:100%;
+    flex:1;
+    display:flex;
+    flex-direction: column;
+}
+
+.page-wrapper a:hover{
+    color: #006669;
+}
+/* post slider */
+.page-wrapper{
+    position: relative;
+}
+
+.page-wrapper .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    cursor:pointer;
+}
+
+.page-wrapper .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    cursor:pointer;
+}
+.page-wrapper .slider-title{
+    text-align: center;
+    margin: 30px auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gray;
+}
+.post-wrapper{
+    width: 70%;
+    height: 350px;
+    margin:0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+.post-wrapper .post{
+    display: inline-block;
+    background-color: white;
+    margin: 0px 10px;
+    width: 300px;
+    height:350px;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+}
+.post .slider-image{  
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+}
+
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+.content::after{
+    content:"";
+    display: table;
+    clear:both;
+}
+.main-content{
+    float: left;
+    width: 70%;
+}
+
+.content .main-content.single{
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+}
+
+.content .main-conten.single .post-title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    background: transparent;
+    border-radius: 0px;
+    color:rgb(245, 5, 53);
+    border: 2px solid red
+}
+
+.content .main-content .post .read-more:hover{
+    background:rgb(229, 78, 108);
+    color: white !important;
+    transition: 0.25s;
+}
+
+.content .main-content .post-image{
+    width: 40%;
+    height: 100%;
+    float:left;
+    padding: 10px;
+}
+.content .main-content .post .post-preview{
+    padding: 10px;
+    width:60%;
+    float: right;  
+}
+.recent-post{
+    margin: 20px;   
+}
+
+.sidebar{
+    float:left;
+    width:30%;
+}
+
+.content .sidebar .section{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;;
+
+}
+.content .sidebar.single{
+    padding: 0px 10px;
+}
+
+.content .sidebar .section.search{
+    margin-top:80px;
+
+}
+
+.content .sidebar .section.topics ol{
+    margin:0 px;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.content .sidebar .section.topics ol li a{
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.content .sidebar .section.topics ol li a:hover{
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+.sidebar.single .post{
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.sidebar.single .post img{
+    height: 60px;
+    width: 75px;
+    margin-right: 10px;
+}
+
+.auth-content{
+    width:30%;
+    margin:50px auto;
+    padding: 20px;
+    background:white;
+    border-radius: 5px;
+
+}
+
+.form-title{
+    text-align: center;
+    
+}
+
+form div{
+    margin-bottom: 10px;
+
+}
+form p{
+    text-align: center;
+}
+form p a{
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer{
+    background-color: #303036;
+    color: #d3d3d3;
+    height: 400px;
+    position:relative;
+
+}
+.footer .footer-bottom{
+    background: #343a40;
+    color: #686868;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top:20px;
+}
+.footer .footer-content{
+    border:none;
+    height:auto;
+    width:100%;
+    display: flex;
+}
+
+.footer .footer-content .footer-section{
+    flex:1;
+    border: none;
+    padding:25px;
+}
+.footer .footer-content h1,
+.footer .footer-content h2{
+    color:white;
+}
+
+.footer .footer-content .about .contact span{
+    display:block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a{
+    border: 1px solid gray;
+    width:45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right:5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+
+}
+.footer .footer-content .about .socials a:hover{
+    border: 1px solid white;
+    color: white
+}
+.footer .footer-content .links ol a{
+    display:block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.footer .footer-content .links ol a:hover{
+    color: white;
+    margin-left: 15px;
+}
+
+.footer .footer-content .contact-form .contact-input{
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    background: #272727;
+    color: #bebdbd;
+    padding: 0.9rem 1.4rem;
+    border: none;
+}
+.footer .footer-content .contact-form .contact-input:focus{
+    background: #1a1a1a;
+}
+
+/* media queries */  
+@media only screen and (max-width:934px){
+    .content{
+        width: 100%;
+    }
+    .main-content{
+        width: 100%;
+        padding: 10px;
+    }
+    .content .main-content .post{
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+        padding: 10px;
+    }
+    .content .sidebar .section.search{
+        margin-top:20px;
+    
+    }
+    .footer{
+        height: auto;
+    }
+    .footer .footer-content{
+        height:auto;
+        flex-direction: column;
+    }
+    .footer .footer-content .contact-form{
+        padding-bottom: 90px;
+    }
+
+}
+@media only screen and (max-width:750px){
+    header{
+        position: relative;
+    }
+    ul{
+        width: 100%;
+        background-color: rgb(229, 78, 108);
+        max-height:0px;
+        overflow: hidden;
+    }
+    ul.showing{
+        max-height: 100em;
+    }
+    ul li{
+        width:100%;
+    }
+    ul li ul{
+        width:100%;
+        display: block;
+        position: static;
+        padding-left:50px;
+    }
+    ul li ul li a:hover{
+        background-color: rgb(245, 5, 53);
+    }
+    ul li ul li a{
+        padding:10px;
+        color: white;
+        background-color: rgb(229, 78, 108);
+    }
+
+    .menu-toggle {
+        display: block; /* or visibility: hidden; depending on your design needs */
+        position: absolute;
+        right:20px;
+        top:20px;
+        font-size: 1.9em;;
+    }
+
+    .logo{
+        height:inherit;
+        float: left;
+        margin-left: 0.5em;
+    }
+
+}
+@media only screen and (max-width:600px){
+    .content .main-content .post{
+        height: auto;
+    }
+    .content .main-content .post-image{
+        width: 100%;
+    }
+    .content .main-content .post .post-preview{
+        width: 100%; 
+    }
+
+    .content .main-content .post .read-more{
+        position: static;
+        width: 100%;
+        display:block;
+        text-align: center;
+    }
+    
+    
+}
